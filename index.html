@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fa-ir" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css"
+        integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If" crossorigin="anonymous">
+
+    <style>
+        .box {
+            border: 1px solid #eee;
+            padding: 30px;
+            background: #fff;
+            box-shadow: 1px 1px 5px #430eff;
+            border-radius: 10px;
+        }
+        h3 {
+            text-align: center;
+            color: #155d9c;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="messages">
+                    <div class="alert alert-primary"></div>
+                    <div class="alert alert-secondary">مبلغ باقی مانده: </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row box">
+            <div class="col-sm-6">
+                <form id="budgeting-form">
+                    <div class="form-group">
+                        <label for="title">title</label>
+                        <input type="text" class="form-control" id="title">
+                    </div>
+                    <div class="form-group">
+                        <label for="price">price</label>
+                        <input type="number" class="form-control" id="price">
+                    </div>
+                    <button type="submit" class="btn btn-primary">ثبت</button>
+                </form>
+            </div>
+            <div class="col-sm-6">
+                <h3 class="mb-3">Costs spent</h3>
+                <ul class="list-group">
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="toast" data-autohide="false" style="position: absolute; top: 50px; right: 10px;">
+        <div class="toast-header">
+            <strong class="mr-auto">هشدار!</strong>
+            <small class="text-muted"></small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">×</button>
+        </div>
+        <div class="toast-body">
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="getBudgetModal" tabindex="-1" role="dialog" aria-labelledby="getBudgetModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="getBudgetModalLabel">بودجه ماهیانه</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="getBudget-form">
+                        <div class="form-group">
+                            <label for="getBudget-input">مبلغ بودجه را وارد نمایید</label>
+                            <input type="number" class="form-control" id="getBudget-input" placeholder="">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="getBudget-btn">ثبت</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.rtlcss.com/bootstrap/v4.2.1/js/bootstrap.min.js"
+        integrity="sha384-a9xOd0rz8w0J8zqj1qJic7GPFfyMfoiuDjC9rqXlVOcGO/dmRqzMn34gZYDTel8k"
+        crossorigin="anonymous"></script>
+
+    <script src="js/LocalStorage.js"></script>
+    <script src="js/HtmlUI.js"></script>    
+    <script src="js/Form.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
